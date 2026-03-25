@@ -9,12 +9,68 @@ layout: default
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
-  </header>
+  {% if page.collection == 'projects' %}
+    <header class="post-header post-header--project">
+      <div class="project-hero">
+        {% if page.img %}
+          <div class="project-hero__media">
+            {% include figure.liquid loading="eager" path=page.img sizes="(min-width: 768px) 320px, 100vw" alt=page.title class="project-hero__image" %}
+          </div>
+        {% endif %}
 
-  <article>
+        <div class="project-hero__content">
+          <h1 class="post-title project-hero__title">{{ page.title }}</h1>
+          {% if page.description %}
+            <p class="post-description project-hero__summary">{{ page.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="project-hero__details">
+        <div class="project-hero__meta">
+          {% if page.period or page.lab or page.tech_stack or page.highlights %}
+            <ul class="project-meta-list">
+              {% if page.period %}
+                <li class="project-meta-list__item">
+                  <span class="project-meta-item__label">Duration</span>
+                  <span class="project-meta-item__value">{{ page.period }}</span>
+                </li>
+              {% endif %}
+              {% if page.lab %}
+                <li class="project-meta-list__item">
+                  <span class="project-meta-item__label">Affiliation</span>
+                  <span class="project-meta-item__value">{{ page.lab }}</span>
+                </li>
+              {% endif %}
+              {% if page.tech_stack %}
+                <li class="project-meta-list__item">
+                  <span class="project-meta-item__label">Tech Stack</span>
+                  <span class="project-meta-item__value">{{ page.tech_stack | join: ", " }}</span>
+                </li>
+              {% endif %}
+              {% if page.highlights %}
+                <li class="project-meta-list__item">
+                  <span class="project-meta-item__label">Key Highlights</span>
+                  <div class="project-meta-item__value project-meta-item__value--chips">
+                    {% for item in page.highlights %}
+                      <span class="project-highlight-chip">{{ item }}</span>
+                    {% endfor %}
+                  </div>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+  {% else %}
+    <header class="post-header{% if page.collection == 'projects' %} post-header--project{% endif %}">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-description">{{ page.description }}</p>
+    </header>
+  {% endif %}
+
+  <article class="page-content{% if page.collection == 'projects' %} page-content--project{% endif %}">
     {{ content }}
   </article>
 

@@ -4,6 +4,11 @@
 
 @use "variables" as v;
 
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 500;
+}
+
 p,
 h1,
 h2,
@@ -17,6 +22,21 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 700;
 }
 
 hr {
