@@ -45,7 +45,7 @@ DAVIAN Lab 소속 박사과정 학생분과 공동 1저자로 협업하여, 사�
 
 ## Approach
 
-### 선행 연구와의 차별점
+### [선행 연구와의 차별점]
 
 | | Mind2Web / WebArena | PersonalWAB | 본 연구 |
 |---|---|---|---|
@@ -57,7 +57,7 @@ DAVIAN Lab 소속 박사과정 학생분과 공동 1저자로 협업하여, 사�
 
 Mind2Web·WebArena는 personalization 자체를 다루지 않으며, PersonalWAB은 personalization을 일부 도입했으나 고정된 snapshot 환경에서만 평가합니다. 본 연구는 **실제로 동작하는 live web**에서 테스트한다는 점에서 재현성과 현실성 측면에서 모두 한 단계 나아간 설정입니다. 도메인은 Similar Web의 taxonomy를 따르는 **23개 big category**를 커버합니다.
 
-### Preference Memory 모듈
+### [Preference Memory 모듈]
 
 raw web history로부터 preference를 구조화하는 파이프라인을 별도로 설계했습니다. 단순히 history를 LLM에 넣는 방식 대신, 아래와 같은 2단계 메모리 구조를 구성했습니다.
 
@@ -69,7 +69,7 @@ raw web history로부터 preference를 구조화하는 파이프라인을 별도
 
 ## Implementation
 
-**전체 파이프라인**
+### [전체 파이프라인]
 ```
 Web History (raw logs)
 → Rule-based 구조화
@@ -80,7 +80,7 @@ Web History (raw logs)
 → 새 task 입력 시: embedding 검색 + LLM reranking → Agent 행동
 ```
 
-**직접 기여한 부분**
+### [직접 기여한 부분]
 
 - 23개 카테고리 기반 live web 환경 데이터셋 구축 (웹사이트 수집 및 annotation 파이프라인)
 - Factual Memory / Preference Memory 2단계 구조 설계 및 구현
@@ -98,10 +98,10 @@ Web History (raw logs)
 
 ## Insights
 
-**배운 점**
+### [배운점]
 
 단순히 LLM에 history를 통째로 넘기는 것보다, 구조화된 메모리로 분리·압축하는 과정이 얼마나 중요한지를 설계하면서 체감했습니다. 또한 live web 환경에서의 평가는 reproducibility 문제가 생기기 때문에, 벤치마크 설계 자체가 하나의 연구 기여가 될 수 있다는 점도 배웠습니다.
 
-**한계**
+### [한계]
 
 현재 진행 중이며, 추후 업데이트 예정입니다.
