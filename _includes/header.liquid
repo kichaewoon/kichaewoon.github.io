@@ -2,8 +2,12 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      {% assign emphasize_brand = false %}
+      {% if page.url contains '/projects/' or page.url contains '/publications/' %}
+        {% assign emphasize_brand = true %}
+      {% endif %}
       {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+        <a class="navbar-brand title {% if emphasize_brand %}font-weight-bold{% else %}font-weight-lighter{% endif %}" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">

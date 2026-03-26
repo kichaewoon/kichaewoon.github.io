@@ -8,6 +8,11 @@ description: >-
 img: "https://moonlight-paper-snapshot.s3.ap-northeast-2.amazonaws.com/arxiv/large-language-models-empowered-personalized-web-agents-1.png"
 period: 2025.11 - Present
 lab: DAVIAN Lab, KAIST AI
+demo_url:
+github_url:
+github_front_url:
+github_back_url:
+pdf_url:
 tech_stack: [Python, LLM API (GPT-4o), Embedding Model, Clustering, Playwright]
 highlights:
   - 벤치마크 설계
@@ -21,11 +26,12 @@ tags: [LLM/Agent, Personalization/Recommendation, Research, Data/System Engineer
 
 ## Overview
 
-LLM 기반 web agent 연구가 활발해지면서, task 수행 능력 자체보다 **사용자 개인의 맥락을 얼마나 잘 반영하는가**가 중요한 문제로 떠오르고 있습니다. 그러나 기존 벤치마크는 모호한 쿼리와 personalization을 전혀 고려하지 않아, 이를 제대로 평가할 수 있는 기반 자체가 부재한 상황이었습니다.
+LLM 기반 web agent의 연구가 활발해지면서, 대부분의 web agent는 사용자가 시키는 지시사항을 대체로 잘 반영하고 있습니다. 그러나 실제 웹 환경에서 사용자들은 자신이 바라는 것들이나 개인의 선호를 query에 명확하게 명시하지 않는 경우가 훨씬 많습니다. 이에 저희는 task 수행 능력 자체보다 **Agent가 사용자 개인의 맥락을 얼마나 잘 포착하고 반영하는가**에 집중해서 연구를 진행하고 있습니다. 기존 벤치마크는 모호한 쿼리와 personalization을 전혀 고려하지 않아, 이를 제대로 평가할 수 있는 기반이 존재하지 않습니다.
 
-DAVIAN Lab 소속 박사 학생과 공동 1저자로 협업하여, 사용자의 web browsing history로부터 preference를 추론하고 모호한 쿼리 상황에서 개인화된 web task를 수행하는 **personalized web agent**를 연구하고 있습니다. 구체적으로는 이를 평가하기 위한 **benchmark 설계 및 데이터셋 구축**과, preference 추론 능력을 갖춘 **개선된 agent 구현**을 함께 진행하고 있습니다.
+DAVIAN Lab 소속 박사과정 학생분과 공동 1저자로 협업하여, 사용자의 web browsing history로부터 preference를 추론하고 모호한 쿼리 상황에서 개인화된 web task를 수행하는 **personalized web agent**를 연구하고 있습니다. 구체적으로는 이를 평가하기 위한 **(1) benchmark 설계 및 데이터셋 구축**과, **(2) preference 추론 능력을 갖춘 개선된 agent 구현**을 함께 진행하고 있습니다.
 
-web 데이터셋 구축, Preference Memory 모듈 설계 및 구현, 실험 설계 및 baseline 비교를 담당하고 있습니다.
+(1) Benchmark 설계 및 데이터셋 구축에서는 Preference 정의, 평가 지표 정의 등을 맡았으며, web 데이터셋을 직접 구축했습니다.
+(2) 개선된 agent 구현은 제가 주도적으로 진행하고 있으며, 구체적으로는 선호를 저장하는 두 단계의 메모리 시스템을 설계 및 구현했고, 실험 설계 및 baseline 비교를 진행하고 있습니다.
 
 ## Problem & Task
 
@@ -74,7 +80,7 @@ Web History (raw logs)
 → 새 task 입력 시: embedding 검색 + LLM reranking → Agent 행동
 ```
 
-**내가 직접 구현한 부분**
+**직접 기여한 부분**
 
 - 23개 카테고리 기반 live web 환경 데이터셋 구축 (웹사이트 수집 및 annotation 파이프라인)
 - Factual Memory / Preference Memory 2단계 구조 설계 및 구현
@@ -98,4 +104,4 @@ Web History (raw logs)
 
 **한계**
 
-- 아직 정량적 성능 검증이 완료되지 않아 baseline 대비 개선폭을 수치로 제시하지 못하는 상태입니다.
+현재 진행 중이며, 추후 업데이트 예정입니다.

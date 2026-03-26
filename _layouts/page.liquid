@@ -23,6 +23,45 @@ layout: default
           {% if page.description %}
             <p class="post-description project-hero__summary">{{ page.description }}</p>
           {% endif %}
+          {% if page.demo_url or page.github_url or page.github_front_url or page.github_back_url or page.pdf_url %}
+            <div class="project-hero__links" aria-label="Project links">
+              {% if page.demo_url %}
+                <a class="project-hero__link" href="{{ page.demo_url }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-play"></i>
+                  <span>Demo</span>
+                </a>
+              {% endif %}
+              {% if page.github_url %}
+                <a class="project-hero__link" href="{{ page.github_url }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+              {% endif %}
+              {% if page.github_front_url %}
+                <a class="project-hero__link" href="{{ page.github_front_url }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub (Front)</span>
+                </a>
+              {% endif %}
+              {% if page.github_back_url %}
+                <a class="project-hero__link" href="{{ page.github_back_url }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i>
+                  <span>GitHub (Back)</span>
+                </a>
+              {% endif %}
+              {% if page.pdf_url %}
+                {% if page.pdf_url contains '://' %}
+                  {% assign project_pdf_url = page.pdf_url %}
+                {% else %}
+                  {% assign project_pdf_url = page.pdf_url | relative_url %}
+                {% endif %}
+                <a class="project-hero__link" href="{{ project_pdf_url }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-regular fa-file-pdf"></i>
+                  <span>PDF</span>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
         </div>
       </div>
 
@@ -81,7 +120,7 @@ layout: default
     </div>
   {% endif %}
 
-  {% if site.giscus and page.giscus_comments %}
+  {% if site.giscus.enabled and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
 </div>

@@ -192,6 +192,11 @@
     line-height: 1.85;
   }
 
+  strong,
+  b {
+    font-weight: 400;
+  }
+
   h2 {
     margin-top: 3.25rem;
     margin-bottom: 1rem;
@@ -269,6 +274,33 @@
   color: var(--global-text-color);
   font-size: 1.02rem;
   line-height: 1.75;
+}
+
+.project-hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  margin-top: -0.35rem;
+}
+
+.project-hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  i {
+    font-size: 0.95rem;
+  }
+
+  &:hover {
+    color: var(--global-theme-color);
+    opacity: 0.8;
+    text-decoration: none;
+  }
 }
 
 .project-hero__duration {
@@ -355,6 +387,10 @@
 }
 
 @media (max-width: 767px) {
+  .project-hero__links {
+    gap: 0.6rem 0.9rem;
+  }
+
   .project-meta-list__item {
     grid-template-columns: 1fr;
     gap: 0.25rem;

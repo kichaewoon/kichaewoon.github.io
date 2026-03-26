@@ -8,6 +8,11 @@ img: https://info.genophore.com/hs-fs/hubfs/DIFFDOCK3.gif?width=557&height=465&n
 period: 2024.07 - 2025.01
 lab: SynBi Lab, KAIST Bio and Brain Engineering
 role: Undergraduate Researcher
+demo_url:
+github_url:
+github_front_url:
+github_back_url:
+pdf_url:
 tech_stack: [PyTorch, Graph Autoencoder, Transformer, GPCR, Protein Graph]
 highlights:
   - Graph-based protein representation
