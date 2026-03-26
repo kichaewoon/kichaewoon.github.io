@@ -188,13 +188,13 @@
 
   p,
   li {
-    font-weight: 350;
+    font-weight: 500;
     line-height: 1.85;
   }
 
   strong,
   b {
-    font-weight: 400;
+    font-weight: 600;
   }
 
   h2 {
@@ -227,7 +227,7 @@
   tr,
   th,
   td {
-    font-weight: 350 !important;
+    font-weight: 500 !important;
   }
 
   table {
@@ -273,6 +273,7 @@
   margin-bottom: 1.5rem;
   color: var(--global-text-color);
   font-size: 1.02rem;
+  font-weight: 500;
   line-height: 1.75;
 }
 
@@ -355,7 +356,7 @@
   display: inline-block;
   color: var(--global-text-color-light);
   font-size: 0.78rem;
-  font-weight: 350 !important;
+  font-weight: 500 !important;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -363,7 +364,7 @@
 .project-meta-item__value {
   color: var(--global-text-color);
   font-size: 0.96rem;
-  font-weight: 350 !important;
+  font-weight: 500 !important;
   line-height: 1.45;
   min-width: 0;
 }
@@ -382,7 +383,7 @@
   background-color: rgba(0, 118, 223, 0.08);
   color: var(--global-theme-color);
   font-size: 0.9rem;
-  font-weight: 350 !important;
+  font-weight: 500 !important;
   line-height: 1.2;
 }
 

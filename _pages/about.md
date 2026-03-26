@@ -42,6 +42,14 @@ For more details, please visit the [Projects](/projects/) section.
     </div>
   </div>
 </div>
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">2019 - 2022</div>
+    <div class="timeline-body">
+      <p class="timeline-title">Hansung Science High School</p>
+    </div>
+  </div>
+</div>
 
 ## Experience
 
