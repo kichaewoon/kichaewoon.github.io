@@ -23,12 +23,12 @@ importance: 2
 tags: [ML/DL, Research]
 giscus_comments: true
 ---
+
 ## Overview
 
-SynBi Lab (합성생물학 연구실) 인턴으로 참여하여, GPCR 단백질의 활성(agonist/antagonist) 예측 성능을 개선하는 연구를 진행했습니다. 신약 개발 파이프라인에서 AI를 활용하는 방법을 탐구하고, 그래프 기반 딥러닝 모델을 단백질 구조 데이터에 적용하는 것이 주요 목표였습니다. 
+SynBi Lab (합성생물학 연구실) 인턴으로 참여하여, GPCR 단백질의 활성(agonist/antagonist) 예측 성능을 개선하는 연구를 진행했습니다. 신약 개발 파이프라인에서 AI를 활용하는 방법을 탐구하고, 그래프 기반 딥러닝 모델을 단백질 구조 데이터에 적용하는 것이 주요 목표였습니다.
 
 기존 HEAL 모델의 베이스라인 코드를 GPCR PDB 데이터에 맞게 수정하고, Graph Auto Encoder 기반의 특징 추출 파이프라인을 직접 구현했습니다.
-
 
 ## Problem & Task
 
@@ -39,7 +39,6 @@ SynBi Lab (합성생물학 연구실) 인턴으로 참여하여, GPCR 단백질�
 - GPCR PDB 파일을 그래프 형식으로 변환하여 모델에 입력 가능한 파이프라인 구성
 - Graph Auto Encoder를 활용해 단백질 구조에서 의미 있는 잠재 표현(latent representation)을 추출하는 것
 
-
 ## Approach
 
 핵심 아이디어는 단백질 3D 구조 정보를 그래프(노드: 잔기/원자, 엣지: 거리 기반 연결)로 변환한 뒤, **Graph Auto Encoder(GAE)**로 압축된 구조적 특징을 추출하고, 이를 downstream 활성 예측 태스크에 활용하는 것입니다.
@@ -48,10 +47,10 @@ SynBi Lab (합성생물학 연구실) 인턴으로 참여하여, GPCR 단백질�
 
 HEAL 논문의 Hierarchical Graph Transformer 베이스라인 대비, GPCR 특화 전처리(PDB 파싱 → 그래프 변환)와 GAE 기반 비지도 특징 추출 단계를 앞단에 추가한 점이 차별점입니다.
 
-
 ## Implementation
 
 ### [전체 파이프라인]
+
 ```
 PDB 파일 → 그래프 변환 (노드: 아미노산 잔기, 엣지: 거리 기반)
 → Graph Auto Encoder (인코더: GCN, 디코더: 인접행렬 재구성)
@@ -70,7 +69,6 @@ PDB 파일 → 그래프 변환 (노드: 아미노산 잔기, 엣지: 거리 기
 - Graph Auto Encoder 학습 코드 구현
 - HEAL 베이스라인 코드를 GPCR 데이터 형식에 맞게 수정 및 디버깅
 
-
 ## Results
 
 정량적 성능 수치를 도출하기까지는 시간이 부족했으나, 다음의 정성적 결과를 확인했습니다.
@@ -80,8 +78,6 @@ PDB 파일 → 그래프 변환 (노드: 아미노산 잔기, 엣지: 거리 기
 - Orphan GPCR 예측 모델로 확장하기 위한 파이프라인 프로토타입 완성
 
 수치 비교는 향후 실험을 통해 보완이 필요한 상태입니다.
-
-
 
 ## Insights
 

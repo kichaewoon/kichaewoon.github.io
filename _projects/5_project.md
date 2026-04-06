@@ -2,12 +2,12 @@
 layout: page
 title: "FOSSLight Scanner: 오픈소스 모델/데이터셋의 라이선스 및 의존성 자동 분석 도구 개발"
 description: >-
-    AI 개발 시 사용하는 오픈소스 모델·데이터셋의 라이선스를 수동으로 검증하는 비효율을 해소하기 위해, Hugging Face/GitHub URL 입력만으로 의존성을 재귀적으로 탐색하고 라이선스를 자동 분석하는 CLI 도구 개발
+  AI 개발 시 사용하는 오픈소스 모델·데이터셋의 라이선스를 수동으로 검증하는 비효율을 해소하기 위해, Hugging Face/GitHub URL 입력만으로 의존성을 재귀적으로 탐색하고 라이선스를 자동 분석하는 CLI 도구 개발
 img: "https://logowik.com/content/uploads/images/fosslight7927.logowik.com.webp"
 period: 2025.09 - 2025.12
 lab: 졸업 프로젝트 (2인 팀)
-demo_url: 
-github_url: 
+demo_url:
+github_url:
 github_front_url:
 github_back_url:
 pdf_url:
@@ -18,7 +18,6 @@ order: 5
 importance: 5
 tags: [LLM Application]
 ---
-
 
 <iframe
   src="/assets/pdf/fosslight.pdf"
@@ -50,6 +49,7 @@ README 파일은 프로젝트마다 형식이 제각각이라 정규식 기반 �
 ## Implementation
 
 ### [전체 파이프라인]
+
 ```
 사용자 URL 입력 (Hugging Face / GitHub)
 → README 분석 (LLM 기반 의존성 식별)

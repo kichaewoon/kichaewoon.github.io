@@ -23,6 +23,7 @@ order: 6
 importance: 6
 tags: [ML/DL, Data/System Engineering]
 ---
+
 <div style="margin: 1rem 0;">
   <label>크기 조절: 
     <input type="range" min="50" max="200" value="100" id="zoom-slider" style="vertical-align: middle;">
@@ -74,7 +75,7 @@ KAIST CS470 (AI 개론) 수업의 5인 팀 프로젝트로, 사람과 동물 음
 
 기존 모델의 한계를 데이터 레벨에서 극복하는 전략을 택했습니다. 사람 음성은
 WSJ0 데이터셋에서, 동물 음성은 Hugging Face의 *Natural and Artificial Non-verbal
-Sound Dataset*과 *Sound Classification of Animal Voice* 데이터셋에서 수집했습니다.
+Sound Dataset*과 _Sound Classification of Animal Voice_ 데이터셋에서 수집했습니다.
 
 수집한 음원을 pydub 라이브러리로 혼합하여 Human+Human(16,000개),
 Human+Animal(8,000개), Animal+Animal(8,000개) 총 32,000개의 혼합 오디오 데이터를
@@ -84,6 +85,7 @@ Human+Animal(8,000개), Animal+Animal(8,000개) 총 32,000개의 혼합 오디�
 ## Implementation
 
 ### [전체 파이프라인]
+
 ```
 원본 음원 수집 (WSJ0 / Hugging Face 동물 음성 데이터셋)
 → 전처리 (볼륨 정규화, 묵음 제거, 5초 단위 분절)
@@ -106,13 +108,13 @@ Human+Animal(8,000개), Animal+Animal(8,000개) 총 32,000개의 혼합 오디�
 SepReformer-anim(저희 모델)을 기존 모델들과 비교한 결과, 다음과 같은 성과를
 달성했습니다.
 
-| System | Params (M) | MACs (G/s) | Si-SNRi (dB) | SDRi (dB) |
-|---|---|---|---|---|
-| Conv-TasNet | 5.05 | 20.13 | -13.80 | -7.49 |
-| DPT-Net | 8.53 | 72.87 | -21.23 | -10.22 |
-| DualPathRNN | 3.65 | 30.12 | -17.10 | -7.30 |
-| SepReformer (baseline) | 14.69 | 45.13 | 8.80 | 8.51 |
-| **SepReformer-anim (ours)** | 14.69 | 43.96 | **11.10** | **10.47** |
+| System                      | Params (M) | MACs (G/s) | Si-SNRi (dB) | SDRi (dB) |
+| --------------------------- | ---------- | ---------- | ------------ | --------- |
+| Conv-TasNet                 | 5.05       | 20.13      | -13.80       | -7.49     |
+| DPT-Net                     | 8.53       | 72.87      | -21.23       | -10.22    |
+| DualPathRNN                 | 3.65       | 30.12      | -17.10       | -7.30     |
+| SepReformer (baseline)      | 14.69      | 45.13      | 8.80         | 8.51      |
+| **SepReformer-anim (ours)** | 14.69      | 43.96      | **11.10**    | **10.47** |
 
 - 비교 대상 5개 모델 중 **Si-SNRi 및 SDRi 모두 최고 성능** 달성
 - 베이스라인 대비 Si-SNRi +2.3dB, SDRi +1.96dB 향상
@@ -142,4 +144,7 @@ SepReformer-anim(저희 모델)을 기존 모델들과 비교한 결과, 다음�
 - Multi-head 또는 Cross-attention 메커니즘 도입으로 사람 음성 패턴에 대한
   모델 민감도 개선
 - 더 다양한 동물 음성 카테고리와 환경 노이즈를 포함한 데이터 확장
+
+```
+
 ```

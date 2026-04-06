@@ -115,4 +115,3 @@ Compared with the original `al-folio` theme, this repository is customized aroun
 - Base theme: [`al-folio`](https://github.com/alshedivat/al-folio)
 - Static site generator: [`Jekyll`](https://jekyllrb.com/)
 - Hosting: [`GitHub Pages`](https://pages.github.com/)
-

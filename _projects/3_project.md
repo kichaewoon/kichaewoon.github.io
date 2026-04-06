@@ -2,12 +2,12 @@
 layout: page
 title: "POPO: 대학생 개발자를 위한 포트폴리오 생성기"
 description: >-
-    대학생 개발자가 프로젝트 정보를 입력하면 LLM 이 포트폴리오를 자동 생성해주는 웹 플랫폼 개발. 현재 Fine tuning과 RAG 이용한 고도화 진행 중
+  대학생 개발자가 프로젝트 정보를 입력하면 LLM 이 포트폴리오를 자동 생성해주는 웹 플랫폼 개발. 현재 Fine tuning과 RAG 이용한 고도화 진행 중
 img: assets/img/popo.png
 period: 2025.03 - Present
 lab: Personal Project (3인 팀)
 demo_url: https://newpopo-front.vercel.app
-github_url: 
+github_url:
 github_front_url:
 github_back_url:
 pdf_url:
@@ -26,7 +26,6 @@ tags: [LLM Application, Fine-tuning, RAG]
 
 개발자 취업 시장에서 포트폴리오의 중요성이 높아지고 있지만, 막상 잘 쓰는 방법을 모르는 대학생 개발자가 많다는 문제를 직접 느끼며 시작한 프로젝트입니다. 프로젝트 정보를 입력하면 LLM이 포트폴리오를 자동으로 생성해주는 웹 플랫폼을 팀 프로젝트로 개발했으며, 저는 백엔드 전반을 담당했습니다. 현재는 범용 LLM의 한계를 극복하기 위해 LoRA Fine-tuning과 RAG 파이프라인을 이용한 고도화를 진행 중입니다.
 
-
 ## Problem & Task
 
 대학생 개발자가 포트폴리오를 작성할 때 겪는 어려움은 크게 두 가지입니다. 첫째로 무엇을 어떻게 써야 할지 모른다는 것, 둘째로 입력 정보가 짧고 모호한 경우가 많다는 것입니다. LLM을 단순히 붙이면 입력이 부실할 때 hallucination이 발생하거나 결과물의 품질이 들쑥날쑥해지는 문제가 생깁니다.
@@ -35,7 +34,6 @@ tags: [LLM Application, Fine-tuning, RAG]
 
 - 짧고 모호한 입력에서도 일관된 품질의 포트폴리오를 생성하는 백엔드 파이프라인 구현
 - 범용 LLM의 포트폴리오 특화 표현 한계를 Fine-tuning과 RAG로 보완
-
 
 ## Approach
 
@@ -50,10 +48,10 @@ tags: [LLM Application, Fine-tuning, RAG]
 - **LoRA Fine-tuning**: 포트폴리오 도메인 데이터를 수집해 Llama 3.1을 fine-tuning, 도메인 특화 표현 품질 개선
 - **RAG**: 우수 포트폴리오 사례를 Vector DB에 저장하고 유사 사례를 검색해 생성 시 참조, 프롬프트만으로 커버하기 어려운 구체적 표현을 레퍼런스 기반으로 보완
 
-
 ## Implementation
 
 ### [전체 파이프라인]
+
 ```
 사용자 입력 (자유형)
 → 구조화된 컨텍스트 변환
@@ -69,7 +67,6 @@ tags: [LLM Application, Fine-tuning, RAG]
 - OpenAI API 연동 및 프롬프트 엔지니어링
 - Llama 3.1 LoRA Fine-tuning 파이프라인 구축 (진행 중)
 - RAG 파이프라인 및 Vector DB 구축 (진행 중)
-
 
 ## Results
 

@@ -24,21 +24,22 @@ horizontal: true
   {% assign all_project_tags = all_project_tags | sort %}
   {% assign project_tags = "LLM/Agent|Personalization/Recommendation|Research|ML/DL|LLM Application|Data/System Engineering" | split: "|" %}
 
-  {% if all_project_tags.size > 0 %}
-    <div class="project-filters" aria-label="Project filters">
-      <div class="project-filter-row">
-        <span class="project-filter-label">Tags:</span>
-        {% for tag in project_tags %}
-          {% if all_project_tags contains tag %}
-            <button class="project-filter-chip" type="button" data-filter-tag="{{ tag }}">{{ tag }}</button>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <button class="project-filter-clear d-none" type="button">Clear filters</button>
-    </div>
-  {% endif %}
+{% if all_project_tags.size > 0 %}
+<div class="project-filters" aria-label="Project filters">
+<div class="project-filter-row">
+<span class="project-filter-label">Tags:</span>
+{% for tag in project_tags %}
+{% if all_project_tags contains tag %}
+<button class="project-filter-chip" type="button" data-filter-tag="{{ tag }}">{{ tag }}</button>
+{% endif %}
+{% endfor %}
+</div>
+<button class="project-filter-clear d-none" type="button">Clear filters</button>
+</div>
+{% endif %}
 
-  {% if page.horizontal %}
+{% if page.horizontal %}
+
   <div class="container px-0">
     <div class="row row-cols-1 project-list">
     {% for project in sorted_projects %}

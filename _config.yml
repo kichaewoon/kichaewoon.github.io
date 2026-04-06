@@ -2,9 +2,9 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Chaewoon Ki  # the website title (if blank, full name will be used instead)
+title: Chaewoon Ki # the website title (if blank, full name will be used instead)
 first_name: Chaewoon
-middle_name: 
+middle_name:
 last_name: Ki
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
@@ -16,7 +16,7 @@ footer_text: >
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: portfolio-website # add your own keywords or leave empty
 lang: kor # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 😳  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 😳 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://71c1nw00n.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
