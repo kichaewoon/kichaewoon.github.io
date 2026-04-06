@@ -12,6 +12,38 @@ let toggleThemeSetting = () => {
   }
 };
 
+let determineLanguageSetting = () => {
+  let languageSetting = localStorage.getItem("language");
+  if (languageSetting !== "ko" && languageSetting !== "en") {
+    languageSetting = (document.documentElement.lang || "en").slice(0, 2).toLowerCase();
+    if (languageSetting !== "ko" && languageSetting !== "en") {
+      languageSetting = "en";
+    }
+  }
+  return languageSetting;
+};
+
+let setLanguageSetting = (languageSetting) => {
+  localStorage.setItem("language", languageSetting);
+  document.documentElement.setAttribute("data-lang", languageSetting);
+  updateLanguageToggle();
+};
+
+let toggleLanguageSetting = () => {
+  let languageSetting = determineLanguageSetting();
+  setLanguageSetting(languageSetting === "ko" ? "en" : "ko");
+};
+
+let updateLanguageToggle = () => {
+  let toggle = document.getElementById("lang-toggle");
+  if (!toggle) return;
+
+  let languageSetting = determineLanguageSetting();
+  let label = languageSetting === "ko" ? "Switch language to English" : "Switch language to Korean";
+  toggle.setAttribute("aria-label", label);
+  toggle.setAttribute("title", label);
+};
+
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
   localStorage.setItem("theme", themeSetting);
@@ -308,6 +340,22 @@ let initTheme = () => {
   // Add event listener to the system theme preference change.
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
     applyTheme();
+  });
+};
+
+let initLanguage = () => {
+  setLanguageSetting(determineLanguageSetting());
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const langToggle = document.getElementById("lang-toggle");
+
+    if (!langToggle) return;
+
+    langToggle.addEventListener("click", function () {
+      toggleLanguageSetting();
+    });
+
+    updateLanguageToggle();
   });
 };
 

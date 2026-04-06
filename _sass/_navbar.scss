@@ -174,8 +174,38 @@
   }
 }
 
+#lang-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.8;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .lang-toggle-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+  }
+}
+
+html[data-lang="en"] #lang-toggle {
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
-  #light-toggle {
+  #light-toggle,
+  #lang-toggle {
     transform: translateY(4px);
   }
 }
