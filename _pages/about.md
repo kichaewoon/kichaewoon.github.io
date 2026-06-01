@@ -23,13 +23,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an undergraduate student at KAIST, currently working as an undergraduate researcher at the [DAVIAN Lab](https://davian.kaist.ac.kr/) in [KAIST AI](https://gsai.kaist.ac.kr/), advised by Jaegul Choo.
+I am an undergraduate researcher at the [DAVIAN Lab](https://davian.kaist.ac.kr/) in [KAIST AI](https://gsai.kaist.ac.kr/), advised by Jaegul Choo.
 
-I am interested in designing AI systems, especially large language models, that can understand language more like humans, remember context over time, and make use of information at the right moment. My work explores how AI systems can better model context, memory, and adaptive reasoning across changing environments. Current interests include LLM memory systems, context-aware reasoning, and practical AI systems for real-world applications.
+I build large language model systems that understand and use context the way people do: retaining what matters, recalling it at the right moment, and adapting as the environment changes. My current work focuses on memory for LLM agents, with broader interests in context-aware reasoning and AI that holds up in practice, not only on benchmarks.
 
-My long-term goal is to become an engineer who builds AI systems that go beyond surface-level language processing and can genuinely understand, retain, and use context in meaningful ways.
+My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely understand, retain, and use context in meaningful ways.
 
-For more details, please visit the [Projects](/projects/) section.
+For more, see the [Projects](/projects/) section.
 
 ## Education
 

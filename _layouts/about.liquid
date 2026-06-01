@@ -4,20 +4,20 @@ layout: default
 <div class="post">
   {% assign about_content_parts = content | split: '<h2' %}
   {% assign about_intro = about_content_parts | first %}
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
 
   <article>
     <div class="about-layout{% unless page.profile %} about-layout--no-profile{% endunless %}">
+      <header class="post-header about-header">
+        <h1 class="post-title">
+          {% if site.title == 'blank' %}
+            <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+            {{ site.last_name }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+        <p class="desc">{{ page.subtitle }}</p>
+      </header>
       {% if page.profile %}
         <div class="profile about-profile">
           {% if page.profile.image %}

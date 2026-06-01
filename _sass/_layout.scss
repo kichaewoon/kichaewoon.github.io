@@ -47,6 +47,21 @@ body.sticky-bottom-footer {
   height: auto;
 }
 
+// Improve readability in post/project body text
+.post-content,
+.page-content {
+  p,
+  li {
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  td,
+  blockquote {
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
 // Content layout uses Bootstrap's grid system with responsive columns
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples

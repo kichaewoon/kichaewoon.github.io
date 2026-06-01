@@ -132,6 +132,26 @@ ul.task-list input[type="checkbox"] {
   width: 100%;
 }
 
+// Name + subtitle header now lives in the left column so it top-aligns
+// with the profile image.
+.about-header {
+  margin-top: 0;
+  margin-bottom: 0; // spacing handled by layout gap (mobile) / row-gap (desktop)
+
+  .post-title {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+  }
+
+  .desc {
+    margin-bottom: 0;
+    color: var(--global-text-color-light);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+}
+
 .about-sections {
   margin-top: 2.5rem;
 }
@@ -209,20 +229,34 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  // Desktop: name + bio in the left column, image spanning on the right,
+  // top-aligned with the name. (DOM order is header, image, content — kept
+  // for mobile stacking — so grid areas place them independently here.)
   .about-layout {
-    flex-direction: row;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(28%, 250px);
+    grid-template-areas:
+      "header profile"
+      "content profile";
+    justify-content: space-between;
+    column-gap: 2.25rem;
+    row-gap: 0.25rem;
+    align-items: start;
+  }
+
+  .about-header {
+    grid-area: header;
   }
 
   .about-profile {
-    width: min(24%, 224px);
-    flex: 0 0 min(24%, 224px);
+    grid-area: profile;
+    width: 100%;
+    align-self: center; // vertically center the image against the text column
   }
 
   .about-content {
-    flex: 0 1 620px;
+    grid-area: content;
     min-width: 0;
-    max-width: 620px;
   }
 }
 
@@ -404,7 +438,7 @@ ul.task-list input[type="checkbox"] {
     align-items: center;
     padding: 0.22rem 0.6rem;
     border-radius: 999px;
-    background-color: rgba(0, 118, 223, 0.08);
+    background-color: rgba(13, 148, 136, 0.1);
     color: var(--global-theme-color);
     font-size: 0.82rem;
     font-weight: 600;
