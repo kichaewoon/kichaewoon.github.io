@@ -58,11 +58,13 @@
   .navbar-brand {
     color: var(--global-text-color);
     font-weight: 700;
+    font-size: 1.4rem;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
     font-weight: 700;
+    font-size: 1.15rem;
 
     &:hover {
       color: var(--global-hover-color);

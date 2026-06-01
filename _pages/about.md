@@ -6,7 +6,7 @@ subtitle: Undergraduate student @ KAIST CS
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -23,13 +23,22 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an undergraduate researcher at the [DAVIAN Lab](https://davian.kaist.ac.kr/) in [KAIST AI](https://gsai.kaist.ac.kr/), advised by Jaegul Choo.
-
-I build large language model systems that understand and use context the way people do: retaining what matters, recalling it at the right moment, and adapting as the environment changes. My current work focuses on memory for LLM agents, with broader interests in context-aware reasoning and AI that holds up in practice, not only on benchmarks.
+I am an undergraduate student in the School of Computing at [KAIST](https://www.kaist.ac.kr/en/), currently working as an undergraduate researcher at the [MLAI Lab](https://www.mlai-kaist.kr/) in [KAIST Graduate School of AI](https://gsai.kaist.ac.kr/).
 
 My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely understand, retain, and use context in meaningful ways.
 
 For more, see the [Projects](/projects/) section.
+
+## Research
+
+My research aims to make large language models more reliable and adaptive when they reason over information that changes across time and context. I focus on giving models a sense of memory: the ability to retain what matters, recall it at the right moment, and adjust their behavior as the environment evolves.
+
+My current research focuses include:
+
+* <strong class="accent-mint">Memory for LLM Agents</strong>: Designing memory architectures that let agents accumulate and reuse context over long horizons, separating transient facts from durable behavioral patterns.
+* <strong class="accent-mint">Context-Aware Reasoning</strong>: Improving how models ground their reasoning in the right information at the right time, rather than treating every query in isolation.
+* <strong class="accent-mint">Personalized Agents</strong>: Developing methods that let agents adapt to individual users and goals, so interactions become more relevant the longer they continue.
+* <strong class="accent-mint">Practical AI Systems</strong>: Building systems that hold up in real-world use, not only on benchmarks, with attention to reliability and efficiency.
 
 ## Education
 
@@ -55,11 +64,11 @@ For more, see the [Projects](/projects/) section.
 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">2025.11 - Present</div>
+    <div class="timeline-date">2025.11 - 2026.05</div>
     <div class="timeline-body">
-      <p class="timeline-title"><a href="https://davian.kaist.ac.kr/">DAVIAN Lab</a>, KAIST AI</p>
+      <p class="timeline-title"><a href="https://davian.kaist.ac.kr/">DAVIAN Lab</a>, KAIST Graduate School of AI</p>
       <p>Undergraduate Researcher</p>
-      <p>Working on LLM-based personalized web agents and contributing to a co-authored research paper.</p>
+      <p>Worked on LLM-based personalized web agents and contributing to a co-authored research paper.</p>
     </div>
   </div>
 
