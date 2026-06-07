@@ -23,7 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an undergraduate student in the School of Computing at [KAIST](https://www.kaist.ac.kr/en/), currently working as an undergraduate researcher at the [MLAI Lab](https://www.mlai-kaist.kr/) in [KAIST Graduate School of AI](https://gsai.kaist.ac.kr/).
+I am an undergraduate student in the School of Computing at [KAIST](https://www.kaist.ac.kr/en/), currently working as an undergraduate researcher at the [MLAI Lab](https://www.mlai-kaist.com/) in [KAIST Graduate School of AI](https://gsai.kaist.ac.kr/).
 
 My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely understand, retain, and use context in meaningful ways.
 
