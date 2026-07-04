@@ -1,0 +1,72 @@
+primary_name: "Chaewoon Ki"
+secondary_name: "기채운"
+navbar_name: "Chaewoon Ki"
+
+positions:
+- name: Undergraduate Student
+- name: School of Computing, KAIST
+  logo: /assets/logo/KAIST_logo.svg.webp
+
+email: "kichaewoon@gmail.com"
+cv_link: /assets/pdf/CV.pdf
+# gscholar: your-google-scholar-id
+github: 71c1nw00n
+twitter: ChaewoonKi
+linkedin: chaewoonki
+# orcid: 0000-0000-0000-0000
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I am an undergraduate student in the School of Computing at <a href="https://www.kaist.ac.kr/en/" target="_blank">KAIST</a>,
+    currently working as an undergraduate researcher at the <a href="https://www.mlai-kaist.com/" target="_blank">MLAI Lab</a>
+    in <a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST Graduate School of AI</a>.
+  </p>
+  <p>
+    My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely
+    understand, retain, and use context in meaningful ways.
+  </p>
+  <p>
+    My research aims to make large language models more reliable and adaptive when they reason over information that changes
+    across time and context. I focus on giving models a sense of memory: the ability to retain what matters, recall it at the
+    right moment, and adjust their behavior as the environment evolves.
+  </p>
+
+portrait_url: /assets/images/photos/portrait.png
+# portrait_caption: ""
+
+education:
+- name: KAIST
+  logo: /assets/logo/KAIST_logo.svg.webp
+  position: "B.S. in Computer Science<br/>Dean's List (2024 Fall)"
+  date: 2022 - Present
+- name: New York University
+  logo: /assets/logo/nyu.jpg
+  position: "Minor in Biomolecular Science (Study-away Program)"
+  date: 2025
+- name: Hansung Science High School
+  logo: /assets/logo/hshs.webp
+  position: ""
+  date: 2019 - 2022
+
+experience:
+- name: MLAI Lab, KAIST AI
+  logo: /assets/logo/KAIST_logo.svg.webp
+  position: Undergraduate Researcher
+  date: 2026.06 - Present
+- name: DAVIAN Lab, KAIST AI
+  logo: /assets/logo/KAIST_logo.svg.webp
+  position: Undergraduate Researcher
+  date: 2025.11 - 2026.05
+- name: SynBi Lab, KAIST BBE
+  logo: /assets/logo/KAIST_logo.svg.webp
+  position: Undergraduate Researcher
+  date: 2024.07 - 2025.01
+- name: Pebblous
+  logo: /assets/logo/pebblous.png
+  position: Research Intern
+  date: 2023.12 - 2024.07
+
+# awards:
+# - name: Award Name
+#   date: 2024
