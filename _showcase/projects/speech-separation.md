@@ -9,7 +9,7 @@ period: "2024.07 - 2024.12"
 lab: "CS470 수업 프로젝트 (5인 팀)"
 tech_stack: ["PyTorch", "SepReformer", "pydub"]
 tags: ["ML/DL"]
-github_url: "https://github.com/71c1nw00n/SepReformer-anim"
+github_url: "https://github.com/kichaewoon/SepReformer-anim"
 ---
 
 ## Overview
