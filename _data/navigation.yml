@@ -3,5 +3,6 @@ pages:
   url: /
 - name: Publications
   url: /publications
-- name: Blog
-  url: /blog
+- name: CV
+  url: /assets/pdf/CV.pdf
+  target: _blank

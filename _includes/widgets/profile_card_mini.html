@@ -38,39 +38,47 @@
                         </a>
                     </div>
                 </div>
-                <div class="row pt-2">
-                    <div class="col text-center h4">
-                        {% if site.data.profile.gscholar %}
-                        {%- if site.data.profile.gscholar contains 'scholar.google' -%}
-                        {%- assign gscholar_url = site.data.profile.gscholar -%}
-                        {%- else -%}
-                        {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
-                        {%- endif -%}
-                        <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}">
-                            <i class="fab fa-google-scholar"></i>
+                <div class="pt-2 social-links">
+                    {% if site.data.profile.gscholar %}
+                    {%- if site.data.profile.gscholar contains 'scholar.google' -%}
+                    {%- assign gscholar_url = site.data.profile.gscholar -%}
+                    {%- else -%}
+                    {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
+                    {%- endif -%}
+                    <div class="text-center">
+                        <a class="text-dark no-break" target="_blank" href="{{ gscholar_url }}">
+                            <i class="fab fa-google-scholar fa-fw"></i> Google Scholar
                         </a>
-                        {% endif %}
-                        {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        {% endif %}
-                        {% if site.data.profile.twitter %}
-                        <a class="px-1 no-break" target="_blank" href="https://x.com/{{ site.data.profile.twitter }}">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                        {% endif %}
-                        {% if site.data.profile.linkedin %}
-                        <a class="px-1 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        {% endif %}
-                        {% if site.data.profile.orcid %}
-                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
-                            <i class="fab fa-orcid"></i>
-                        </a>
-                        {% endif %}
                     </div>
+                    {% endif %}
+                    {% if site.data.profile.linkedin %}
+                    <div class="text-center">
+                        <a class="text-dark no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                            <i class="fab fa-linkedin fa-fw"></i> LinkedIn
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.data.profile.github %}
+                    <div class="text-center">
+                        <a class="text-dark no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
+                            <i class="fab fa-github fa-fw"></i> GitHub
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.data.profile.twitter %}
+                    <div class="text-center">
+                        <a class="text-dark no-break" target="_blank" href="https://x.com/{{ site.data.profile.twitter }}">
+                            <i class="fab fa-x-twitter fa-fw"></i> Twitter
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.data.profile.orcid %}
+                    <div class="text-center">
+                        <a class="text-dark no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
+                            <i class="fab fa-orcid fa-fw"></i> ORCID
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

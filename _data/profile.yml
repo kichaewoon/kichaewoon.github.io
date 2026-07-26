@@ -9,7 +9,7 @@ positions:
 
 email: "kichaewoon@gmail.com"
 cv_link: /assets/pdf/CV.pdf
-# gscholar: your-google-scholar-id
+gscholar: yPZ21TcAAAAJ
 github: kichaewoon
 twitter: ChaewoonKi
 linkedin: chaewoonki
@@ -18,6 +18,9 @@ linkedin: chaewoonki
 short_bio_text_justify: false
 short_bio: >-
   <p>
+    <b>Research Interests: LLM Reasoning & Reliability, Agentic AI, Self-Evolving Memory, LLM Applications</b>
+  </p>
+  <p>
     I am an undergraduate student in the School of Computing at <a href="https://www.kaist.ac.kr/en/" target="_blank">KAIST</a>,
     currently working as an undergraduate researcher at the <a href="https://www.mlai-kaist.com/" target="_blank">MLAI Lab</a>
     in <a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST Graduate School of AI</a>.
@@ -25,15 +28,10 @@ short_bio: >-
   <p>
     My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely
     understand, retain, and use context in meaningful ways.
-  </p>
-  <p>
     My research aims to make large language models more reliable and adaptive when they reason over information that changes
-    across time and context. I focus on giving models a sense of memory: the ability to retain what matters, recall it at the
-    right moment, and adjust their behavior as the environment evolves.
+    across time and context.
   </p>
-  <p>
-    <b>Research Interests: LLM Reasoning & Reliability, Agentic AI, Self-Evolving Memory, LLM Applications</b>
-  </p>
+  
 
 portrait_url: /assets/images/photos/portrait.png
 # portrait_caption: ""
