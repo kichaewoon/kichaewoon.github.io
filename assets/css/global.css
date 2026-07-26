@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6,
     font-size: 0.88rem;
 }
 
+.social-links {
+    font-size: 0.85rem;
+}
+
 @media (min-width: 768px) {
     .pub-cover-col {
         flex: 0 0 25%;
