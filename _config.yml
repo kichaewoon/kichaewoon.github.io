@@ -1,6 +1,9 @@
 baseurl: ""
 url: https://kichaewoon.github.io
 
+# Google Analytics 4 — only loads on the production site (not local `jekyll serve`).
+google_analytics: G-9H9H6ECLS9
+
 markdown: kramdown
 plugins:
   - jekyll-email-protect
