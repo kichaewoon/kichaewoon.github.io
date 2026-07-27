@@ -33,13 +33,13 @@ short_bio: >-
   </p>
   
 
-portrait_url: /assets/images/photos/portrait.png
+portrait_url: /assets/images/photos/pizza.JPG
 # portrait_caption: ""
 
 education:
 - name: KAIST
   logo: /assets/logo/KAIST_logo.svg.webp
-  position: "B.S. in Computer Science<br/>Dean's List (2024 Fall)"
+  position: "B.S. in Computer Science<br/>Dean's List (2024 Fall, Top 3%)"
   date: 2022 - Present
 - name: New York University
   logo: /assets/logo/nyu.jpg
