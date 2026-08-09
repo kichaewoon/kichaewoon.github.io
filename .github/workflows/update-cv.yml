@@ -1,6 +1,11 @@
 name: Update CV from Overleaf
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/update-cv.yml
   schedule:
     - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
