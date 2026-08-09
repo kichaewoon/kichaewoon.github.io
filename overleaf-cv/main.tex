@@ -1,0 +1,270 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=navy,
+    linkcolor=navy,
+    citecolor=navy
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.3}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+\definecolor{navy}{RGB}{0,80,230}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{0pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[1pt]} \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Chaewoon Ki} \\ \vspace{5pt}
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{kichaewoon@gmail.com} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://kichaewoon.github.io}{\texttt{kichaewoon}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/chaewoonki}{\texttt{chaewoonki}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Seoul, South Korea}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{RESEARCH INTERESTS}
+\resumeSubHeadingListStart
+\item {\small{
+Reasoning \& Reliability, Agentic AI, Self-Evolving Memory, LLM Applications
+}}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {KAIST (Korea Advanced Institute of Science and Technology)}{Mar 2022 -- Aug 2026}
+      {B.S. in Computer Science, Specialized Track in Artificial Intelligence}{Daejeon, South Korea}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.74 / 4.3}
+        \resumeItem{Dean's List, top 3\% in College of Engineering (Fall 2024)}
+      \resumeItemListEnd
+    \resumeSubheading
+      {New York University}{Jan 2025 -- May 2025}
+      {Minor in Biomolecular Science (Exchange Program)}{New York, NY, USA}
+      \resumeItemListStart
+        \resumeItem{GPA: 4.0 / 4.0}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+  \resumeSubHeadingListStart
+    \item {
+      \textbf{[C1] PersonaTrail: Benchmarking Personalized Web Agents through Browsing Trails} \\
+      Seungbin Yang$^{*}$, \textbf{Chaewoon Ki}$^{*}$, Dohyun Lee, Jaegul Choo, ChaeHun Park. \\
+      \textit{In submission, ARR August.} \href{https://arxiv.org/abs/2607.20482}{[paper]} \hspace{4pt} ($^{*}$ equal contribution)
+    }
+    \vspace{3pt}
+  \resumeSubHeadingListEnd
+
+%-----------HONORS & AWARDS-----------
+\section{HONORS \& AWARDS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     KAIST Academic Scholarship, full tuition (2022--2026) \\
+     College of Engineering Dean's List, top 3\% (Fall 2024) \\
+     KIAT Korea--U.S. Advanced Industry Exchange Scholarship (Spring 2025) \\
+     Lim Mi-Sook Scholarship, awarded for leadership (Fall 2024)
+    }}
+ \end{itemize}
+ 
+%-----------RESEARCH EXPERIENCE-----------
+\section{RESEARCH EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {DAVIAN Lab, KAIST (PI: Prof. Jaegul Choo)}{Nov 2025 -- Present}
+      {Undergraduate Research Intern}{Daejeon, South Korea}
+      \resumeItemListStart
+        \resumeItem{Co-first author on \textbf{PersonaTrail}, a benchmark evaluating an agent's ability to infer users' implicit preferences from raw browsing histories under under-specified queries}
+        \resumeItem{Built a two-level memory framework (\textbf{PACMEM}) separating factual memory (task-level navigation logs) and preference memory (long-term behavioral patterns), with embedding-based retrieval and LLM reranking to fit context constraints}
+        \resumeItem{Designed the benchmark pipeline (website curation, query templates, trajectory rollout) and personalization metrics; served open-source LLMs (Llama 4 Scout, Qwen) via vLLM on H200 GPUs}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SynBi Lab, KAIST (PI: Prof. Gwansu Yi)}{Jul 2024 -- Jan 2025}
+      {Individual Study}{Daejeon, South Korea}
+      \resumeItemListStart
+        \resumeItem{Contributed to AI-driven drug-target binding research; implemented a GNN-based protein pre-training module for a fragment-based drug generation model}
+        \resumeItem{Applied a Graph Autoencoder to compress high-dimensional protein graph data into structure-preserving representations for downstream learning}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Pebblous}{Dec 2023 -- Jul 2024}
+      {Research Intern, Data Science Team}{South Korea}
+      \resumeItemListStart
+        \resumeItem{Collected and preprocessed 8 public battery datasets (NASA PCoE, CALCE CS2, etc.) into a unified pipeline across heterogeneous data environments}
+        \resumeItem{Ran comparative ML/DL experiments (LSTM, GRU, LightGBM, XGBoost) via PyCaret AutoML; identified LightGBM as the top performer and uncovered a DL shifting artifact, and authored a research paper on SOH prediction methods}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Fitfor} -- Exercise Recommendation Platform for Wheelchair Users}{Fall 2024}
+          \resumeItemListStart
+            \resumeItem{Redefined the problem scope through direct interviews with wheelchair users, pivoting to an adaptive exercise recommendation system based on individual physical capability}
+            \resumeItem{Built an LLM-based adaptive recommendation pipeline (FastAPI, Next.js, OpenAI API); \textbf{won the People's Choice Award} at Kakao Impact's ``Tech for Impact'' program}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{FOSSLight Dataset Scanner} -- Industry Collaboration with LG Electronics}{Fall 2025}
+          \resumeItemListStart
+            \resumeItem{Built a CLI tool that recursively traverses Hugging Face/GitHub dependencies to automatically analyze open-source model and dataset licenses, with an LLM-based README analysis module replacing brittle regex rules}
+            \resumeItem{Constructed an 80-case evaluation set; achieved \textbf{F1 97.56\%} (Accuracy 95.24\%, Precision 100\%, Recall 95.24\%)}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Detecting and Separating AI-Generated Voices}}{Summer--Fall 2024}
+          \resumeItemListStart
+            \resumeItem{Built a Res2Net-based detector for genuine vs. AI-generated voices, reaching \textbf{Top 20\%} at the Dacon SW-Centered University AI Competition}
+            \resumeItem{Extended the work to speech separation (Asymmetric Encoder-Decoder) to handle the separation bottleneck, covering human-animal mixed audio; improved \textbf{SI-SNRi by +2.3 dB} and SDRi by +1.96 dB over baseline, winning 2nd place in the Introduction to AI course competition}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{AI / ML}{: LLM Web Agents, RAG, Agent Memory Systems, Context Engineering, Embedding-based Retrieval}\vspace{2pt} \\
+     \textbf{Frameworks \& Tools}{: PyTorch, FastAPI, Playwright, Next.js, vLLM, Vector DB}\vspace{2pt} \\
+     \textbf{Programming}{: Python, C/C++, Java, SQL}\vspace{2pt} \\
+     \textbf{Languages}{: Korean (Native), English (TOEIC 960, OPIc AL)}
+    }}
+ \end{itemize}
+
+
+
+%-------------------------------------------
+\end{document}
