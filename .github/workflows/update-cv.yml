@@ -1,0 +1,50 @@
+name: Update CV from Overleaf
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-cv-from-overleaf
+  cancel-in-progress: true
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout homepage
+        uses: actions/checkout@v4
+
+      - name: Clone Overleaf project
+        env:
+          OVERLEAF_GIT_TOKEN: ${{ secrets.OVERLEAF_GIT_TOKEN }}
+        run: |
+          test -n "$OVERLEAF_GIT_TOKEN"
+          git config --global credential.helper store
+          printf 'https://git:%s@git.overleaf.com\n' "$OVERLEAF_GIT_TOKEN" > ~/.git-credentials
+          git clone --depth 1 https://git.overleaf.com/6a2129e41395e109a4b5bc86 overleaf-cv
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: overleaf-cv
+
+      - name: Publish PDF
+        run: cp overleaf-cv/main.pdf assets/pdf/CV.pdf
+
+      - name: Commit updated PDF
+        run: |
+          if git diff --quiet -- assets/pdf/CV.pdf; then
+            echo "CV PDF is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/pdf/CV.pdf
+          git commit -m "Update CV from Overleaf"
+          git push
