@@ -43,7 +43,9 @@ jobs:
         run: cp overleaf-cv/main.pdf assets/pdf/CV.pdf
 
       - name: Commit updated PDF
+        id: publish
         run: |
+          echo "changed=false" >> "$GITHUB_OUTPUT"
           if git diff --quiet -- assets/pdf/CV.pdf; then
             echo "CV PDF is already up to date."
             exit 0
@@ -53,3 +55,23 @@ jobs:
           git add assets/pdf/CV.pdf
           git commit -m "Update CV from Overleaf"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Ruby
+        if: steps.publish.outputs.changed == 'true' || github.event_name == 'push'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Build site
+        if: steps.publish.outputs.changed == 'true' || github.event_name == 'push'
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build
+
+      - name: Deploy site
+        if: steps.publish.outputs.changed == 'true' || github.event_name == 'push'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
