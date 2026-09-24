@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  24 SEP 2026 00:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  24 SEP 2026 05:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -508,11 +508,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  15149 strings out of 467168
  262533 string characters out of 5411585
- 690595 words of memory out of 5000000
+ 692595 words of memory out of 5000000
  44197 multiletter control sequences out of 15000+600000
  656569 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,11n,79p,356b,742s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,11n,79p,356b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb>
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Bra
 nds-Regular.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/fontawesome5
@@ -522,7 +522,7 @@ nts/cm/cmsy6.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb
 ></opt/texlive/texdir/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on main.pdf (2 pages, 171473 bytes).
+Output written on main.pdf (2 pages, 172103 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
