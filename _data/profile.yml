@@ -3,8 +3,8 @@ secondary_name: "기채운"
 navbar_name: "Chaewoon Ki"
 
 positions:
-- name: Undergraduate Student
-- name: School of Computing, KAIST
+- name: Incoming M.S. Student
+- name: Graduate School of AI, KAIST
   logo: /assets/logo/KAIST_logo.svg.webp
 
 email: "kichaewoon@gmail.com"
@@ -18,18 +18,24 @@ linkedin: chaewoonki
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    <b>Research Interests: LLM Reasoning & Reliability, Agentic AI, Self-Evolving Memory, LLM Applications</b>
+    <b>Research Interests: Agentic AI · LLM Memory & Personalization · Small Language Models</b>
   </p>
   <p>
-    I am an undergraduate student in the School of Computing at <a href="https://www.kaist.ac.kr/en/" target="_blank">KAIST</a>,
-    currently working as an undergraduate researcher at the <a href="https://www.mlai-kaist.com/" target="_blank">MLAI Lab</a>
-    in <a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST Graduate School of AI</a>.
+    I received my B.S. in Computer Science from <a href="https://www.kaist.ac.kr/en/" target="_blank">KAIST</a> in 2026.
+    I will be joining the <a href="https://www.mlai-kaist.com/" target="_blank">MLAI Lab</a>
+    at <a href="https://gsai.kaist.ac.kr/" target="_blank">KAIST Graduate School of AI</a> as an M.S. student in March 2027,
+    advised by Prof. <a href="https://www.sungjuhwang.com/" target="_blank">Sung Ju Hwang</a>.
   </p>
   <p>
-    My long-term goal is to build AI systems that go beyond surface-level language processing: systems that can genuinely
-    understand, retain, and use context in meaningful ways.
-    My research aims to make large language models more reliable and adaptive when they reason over information that changes
-    across time and context.
+    My recent work includes <a href="https://arxiv.org/abs/2607.20482" target="_blank">PersonaTrail</a>, a benchmark and
+    memory framework (PacMem) for personalized web agents.
+    I am currently working on research agents that plan and carry out long-horizon scientific workflows.
+  </p>
+  <p>
+    More broadly, I want agents to reason reliably when the information they depend on keeps changing across sessions, users,
+    and tasks.
+    I am also interested in bringing these abilities to small language models through post-training, so that capable agents
+    can run where frontier models are too slow or costly.
   </p>
   
 
@@ -39,30 +45,18 @@ portrait_url: /assets/images/photos/pizza.JPG
 education:
 - name: KAIST
   logo: /assets/logo/KAIST_logo.svg.webp
+  position: "M.S. in Artificial Intelligence (Graduate School of AI)<br/>Advisor: Prof. <a href=\"https://www.sungjuhwang.com/\" target=\"_blank\">Sung Ju Hwang</a>"
+  date: 2027
+- name: KAIST
+  logo: /assets/logo/KAIST_logo.svg.webp
   position: "B.S. in Computer Science<br/>Dean's List (2024 Fall, Top 3%)"
-  date: 2022 - Present
+  date: 2022 - 2026
 - name: New York University
   logo: /assets/logo/nyu.jpg
-  position: "Minor in Biomolecular Science (Study-away Program)"
+  position: "Minor in Biomolecular Science (KAIST–NYU Joint Program)"
   date: 2025
-- name: Hansung Science High School
-  logo: /assets/logo/hshs.webp
-  position: ""
-  date: 2019 - 2022
 
 experience:
-- name: MLAI Lab, KAIST AI
-  logo: /assets/logo/KAIST_logo.svg.webp
-  position: Undergraduate Researcher
-  date: 2026.06 - Present
-- name: DAVIAN Lab, KAIST AI
-  logo: /assets/logo/KAIST_logo.svg.webp
-  position: Undergraduate Researcher
-  date: 2025.11 - 2026.05
-- name: SynBi Lab, KAIST BBE
-  logo: /assets/logo/KAIST_logo.svg.webp
-  position: Undergraduate Researcher
-  date: 2024.07 - 2025.01
 - name: Pebblous
   logo: /assets/logo/pebblous.png
   position: Research Intern
